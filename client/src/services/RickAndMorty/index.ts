@@ -1,3 +1,3 @@
-import { getCharacters } from './getCharacters'
+import { getCharacters, getCharactersWithName } from './getCharacters'
 
-export { getCharacters }
+export { getCharacters, getCharactersWithName }
