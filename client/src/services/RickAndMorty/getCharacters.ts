@@ -10,3 +10,8 @@ export function getCharactersWithName(name: string) {
     .then(response => response.json())
   return responseAPI
 }
+export function getCharactersWithPage(page: string) {
+  const responseAPI = fetch(`${BASE_URL_API}?page=${page}`)
+    .then(response => response.json())
+  return responseAPI
+}
