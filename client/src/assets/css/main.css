@@ -24,9 +24,23 @@ h5,
 h6 {
   /* Balance headings across multiple lines into an even block */
   text-wrap: balance;
+  line-height: 2.2;
 }
 
 p {
   /* prevent text orphans (single word on last line) */
   text-wrap: pretty;
+  line-height: 1.7;
+}
+
+@layer base {
+  .grid-container {
+    @apply grid grid-cols-6 xl:grid-cols-12 w-full gap-[1rem] xl:gap-[2rem];
+  }
+  .container-padding {
+    @apply p-[1rem] xl:p-[2rem];
+  }
+  .btn-shape {
+    @apply py-[0.5rem] xl:py-[1rem] px-[1rem] xl:px-[2rem] rounded-lg;
+  }
 }
