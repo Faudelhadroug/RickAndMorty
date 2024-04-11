@@ -41,6 +41,6 @@ p {
     @apply p-[1rem] xl:p-[2rem];
   }
   .btn-shape {
-    @apply py-[0.5rem] xl:py-[1rem] px-[1rem] xl:px-[2rem] rounded-lg;
+    @apply py-[0.5rem] xl:py-[1rem] px-[1rem] xl:px-[2rem] rounded-lg hover:scale-110 hover:duration-200;
   }
 }
