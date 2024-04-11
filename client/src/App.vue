@@ -47,8 +47,8 @@ import { RouterView } from 'vue-router'
 }
 
 :root {
-  --main-color: #ecf0f1;
-  --point-color: #555;
+  --main-color: #4c5252;
+  --point-color: #f3f4f4;
   --size: 5px;
 }
 </style>
