@@ -36,7 +36,6 @@ watch(props, (newProps) => {
       allGender.value.push(genderCharacter)
       if (!allUniqueGender.value.includes(genderCharacter)) {
         allUniqueGender.value.push(genderCharacter)
-        allUniqueGender.value.sort()
         genderWithValue.value.push({ name: genderCharacter, value: 1 })
       }
       else {

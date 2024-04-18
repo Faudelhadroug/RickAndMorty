@@ -211,7 +211,7 @@ async function resetData() {
               <p class="text-lg text-[#F3F4F4]">
                 {{ character.name }}
               </p>
-              <button class="underline cursor-pointer text-[#C3F272]" @click="openModalDetail(character.id)">
+              <button class="underline cursor-pointer text-[#C3F272] text-sm" @click="openModalDetail(character.id)">
                 Full details
               </button>
             </div>
