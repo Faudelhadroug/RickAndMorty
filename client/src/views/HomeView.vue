@@ -166,9 +166,9 @@ async function resetData() {
     </div>
     <div class="col-span-6 md:col-span-4 md:col-start-2 xl:col-span-12 xl:col-start-2 xl:gap-[2rem] w-full">
       <div class="flex flex-col px-[2rem]">
-        <label for="searchCharacter" class="pb-[0.5rem]">Search a specific character</label>
+        <label for="searchBarCharacter" class="pb-[0.5rem]">Search a specific character</label>
         <div class="flex flex-col space-y-[1rem] xl:space-y-0 xl:flex-row xl:space-x-[1rem]">
-          <input v-model="searchCharacter" type="text" name="searchCharacter" class="py-[0.5rem] px-[1rem] text-[#101919]" @keyup.enter="addSearchQuery()">
+          <input v-model="searchCharacter" id="searchBarCharacter" type="text" name="searchCharacter" class="py-[0.5rem] px-[1rem] text-[#101919]" @keyup.enter="addSearchQuery()">
           <input type="button" name="validSearch" value="Search now" class="bg-[#257074] text-[#f3f4f4] btn-shape" @click="addSearchQuery()">
         </div>
         <div class="py-[2rem] space-x-[1rem]">
