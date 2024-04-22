@@ -7,6 +7,7 @@ Quick demo project with Rick and Morty API using the following technologies:
 ## Install
 
 ```bash
+cd client/
 pnpm install
 ```
 
