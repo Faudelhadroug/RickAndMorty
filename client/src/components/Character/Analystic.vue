@@ -101,4 +101,3 @@ const option = ref({
     <VChart class="h-[600px]" :option="option" autoresize />
   </div>
 </template>
-

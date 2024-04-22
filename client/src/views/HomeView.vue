@@ -10,7 +10,6 @@ import CharacterAnalystic from '@/components/Character/Analystic.vue'
 const statusSpoil = ref<boolean>(false)
 const charactersInfos = ref<CharactersInfos | null>(null)
 const charactersResults = ref<CharactersResults[] | null>(null)
-const errorMessage = ref<string | null>(null)
 const loading = ref<boolean>(true)
 const route = useRoute()
 
@@ -26,9 +25,7 @@ function addQueryToRouter() {
 }
 
 async function loadData() {
-  const { info, results, error } = await getCharacters()
-  if (error)
-    errorMessage.value = 'Impossible to load the data for the moment'
+  const { info, results } = await getCharacters()
   charactersInfos.value = info
   charactersResults.value = results
 }
@@ -76,9 +73,6 @@ function openModalDetail(id: number | string) {
   if (indexOfCharacter !== -1 && indexOfCharacter !== undefined) {
     detailsCharacter.value = charactersResults.value![indexOfCharacter]
     document.getElementsByTagName('body')[0].classList.add('modal-open')
-  }
-  else {
-    // HANDLE NOT FOUND ID
   }
 }
 
