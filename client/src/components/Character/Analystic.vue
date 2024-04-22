@@ -102,6 +102,3 @@ const option = ref({
   </div>
 </template>
 
-<style scoped>
-
-</style>
