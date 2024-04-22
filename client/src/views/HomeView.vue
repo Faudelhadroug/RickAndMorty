@@ -189,11 +189,11 @@ async function resetData() {
       </div>
     </div>
     <div class="col-span-6 xl:col-span-12 py-[2rem]">
-      <div id="characterPaginationTop" class="flex justify-center items-center py-[2rem] space-x-[1rem] text-center xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
+      <div id="characterPaginationTop" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
         <button v-if="charactersInfos && charactersInfos.prev" class="px-[2rem] bg-[#C3F272] text-[#101919] btn-shape" @click="getPrevCharacters()">
           Prev
         </button>
-        <p> Page {{ actualPage }} / {{ charactersInfos?.pages }}</p>
+        <p>Page {{ actualPage }} / {{ charactersInfos?.pages }}</p>
         <button v-if="charactersInfos && charactersInfos.next" class="px-[2rem] bg-[#87D5D9] text-[#101919] btn-shape" @click="getNextCharacters()">
           Next
         </button>
@@ -222,11 +222,11 @@ async function resetData() {
           <span class="loader__element" />
         </div>
       </div>
-      <div id="characterPaginationBottom" class="flex justify-center items-center py-[2rem] text-center space-x-[1rem] xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
+      <div id="characterPaginationBottom" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
         <button v-if="charactersInfos && charactersInfos.prev" class="px-[2rem] bg-[#C3F272] text-[#101919] btn-shape" @click="getPrevCharacters()">
           Prev
         </button>
-        <p> Page {{ actualPage }} / {{ charactersInfos?.pages }}</p>
+        <p>Page {{ actualPage }} / {{ charactersInfos?.pages }}</p>
         <button v-if="charactersInfos && charactersInfos.next" class="px-[2rem] bg-[#87D5D9] text-[#101919] btn-shape" @click="getNextCharacters()">
           Next
         </button>
