@@ -176,8 +176,8 @@ async function resetData() {
           <input id="statusSpoil" v-model="statusSpoil" type="checkbox" name="statusSpoil">
         </div>
         <div class="pb-[1rem]">
-          <button class="btn-shape bg-red-600" @click="resetData()">
-            Reset data
+          <button class="btn-shape bg-[#5F0C0C] border-red-600 border-2 text-[#f3f4f4]" @click="resetData()">
+            Reset query
           </button>
         </div>
         <a href="https://github.com/afuh/rick-and-morty-api" target="_blank">
@@ -199,7 +199,7 @@ async function resetData() {
         </button>
       </div>
       <div v-if="Array.isArray(charactersResults) && !loading" id="listCharacters" class="grid-container py-[2rem]">
-        <CharacterCard v-for="character in charactersResults" :key="character.name" class="col-span-6 sm:col-span-3 md:col-span-2 xl:col-span-3 bg-[#257074] rounded-2xl">
+        <CharacterCard v-for="character in charactersResults" :key="character.name" class="col-span-6 sm:col-span-3 md:col-span-2 xl:col-span-3 bg-[#0B2828] border-[#C3F272] border-2 rounded-2xl">
           <template #name>
             <div class="p-[1rem] flex justify-between items-center">
               <p class="text-lg text-[#F3F4F4]">
@@ -211,7 +211,7 @@ async function resetData() {
             </div>
           </template>
           <template #image>
-            <img width="256" height="256" class="w-full" :src="character.image">
+            <img width="256" height="256" class="w-full rounded-2xl" :src="character.image" :alt="character.name">
           </template>
         </CharacterCard>
       </div>
