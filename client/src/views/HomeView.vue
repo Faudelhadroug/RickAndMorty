@@ -165,31 +165,15 @@ async function resetData() {
       <img v-for="character in charactersResults" :key="character.id" width="64" height="64" :src="character.image" :alt="character.name" class="hover:scale-125 hover:duration-200 hover:mx-[0.5rem]" @click="openModalDetail(character.id)">
     </div>
     <div class="col-span-6 md:col-span-4 md:col-start-2 xl:col-span-12 xl:col-start-2 xl:gap-[2rem] w-full">
-      <div class="flex flex-col px-[2rem]">
-        <label for="searchBarCharacter" class="pb-[0.5rem]">Search a specific character</label>
-        <div class="flex flex-col space-y-[1rem] xl:space-y-0 xl:flex-row xl:space-x-[1rem]">
-          <input v-model="searchCharacter" id="searchBarCharacter" type="text" name="searchCharacter" class="py-[0.5rem] px-[1rem] text-[#101919]" @keyup.enter="addSearchQuery()">
-          <input type="button" name="validSearch" value="Search now" class="bg-[#257074] text-[#f3f4f4] btn-shape" @click="addSearchQuery()">
-        </div>
-        <div class="py-[2rem] space-x-[1rem]">
-          <label for="statusSpoil">Display spoiler status of the character</label>
-          <input id="statusSpoil" v-model="statusSpoil" type="checkbox" name="statusSpoil">
-        </div>
-        <div class="pb-[1rem]">
-          <button class="btn-shape bg-[#5F0C0C] border-red-600 border-2 text-[#f3f4f4]" @click="resetData()">
-            Reset query
-          </button>
-        </div>
-        <a href="https://github.com/afuh/rick-and-morty-api" target="_blank">
-          <p class="underline font-bold text-red-400">The following data are deprecated, may contain error don't use it for any reference thanks !</p>
-        </a>
-        <a href="#analystic">
-          <p class="text-[#C3F272] underline">Find analystic at the end of the page</p>
-        </a>
-      </div>
+      <a href="https://github.com/afuh/rick-and-morty-api" target="_blank">
+        <p class="underline font-bold text-red-400">The following data are deprecated, may contain error don't use it for any reference thanks !</p>
+      </a>
+      <a href="#analystic">
+        <p class="text-[#C3F272] underline">Find analystic at the end of the page</p>
+      </a>
     </div>
-    <div class="col-span-6 xl:col-span-12 py-[2rem]">
-      <div id="characterPaginationTop" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
+    <div class="col-span-6 xl:col-span-12">
+      <div id="characterPaginationTop" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg outline" style="outline-color: #257074;">
         <button v-if="charactersInfos && charactersInfos.prev" class="px-[2rem] bg-[#C3F272] text-[#101919] btn-shape" @click="getPrevCharacters()">
           Prev
         </button>
@@ -197,6 +181,25 @@ async function resetData() {
         <button v-if="charactersInfos && charactersInfos.next" class="px-[2rem] bg-[#87D5D9] text-[#101919] btn-shape" @click="getNextCharacters()">
           Next
         </button>
+      </div>
+      <div class="col-span-6 md:col-span-4 md:col-start-2 xl:col-span-12 xl:col-start-2 xl:gap-[2rem] w-full mt-[2rem]">
+        <div class="flex flex-col px-[2rem]">
+          <label for="searchBarCharacter" class="pb-[0.5rem]">Search a specific character</label>
+          <div class="flex flex-col space-y-[1rem] xl:space-y-0 xl:flex-row xl:space-x-[1rem]">
+            <input v-model="searchCharacter" id="searchBarCharacter" type="text" name="searchCharacter" class="py-[0.5rem] px-[1rem] text-[#101919]" @keyup.enter="addSearchQuery()">
+            <input type="button" name="validSearch" value="Search now" class="bg-[#257074] text-[#f3f4f4] btn-shape" @click="addSearchQuery()">
+            <p class="text-center flex items-center justify-center">or</p>
+            <button class="btn-shape bg-[#5F0C0C] border-red-600 border-2 text-[#f3f4f4]" @click="resetData()">
+              Reset query
+            </button>
+            <div class="xl:pl-[2rem]">
+            </div>
+          </div>
+          <div class="py-[2rem] space-x-[1rem]">
+            <label for="statusSpoil">Display spoiler status of the character</label>
+            <input id="statusSpoil" v-model="statusSpoil" type="checkbox" name="statusSpoil">
+          </div>
+        </div>
       </div>
       <div v-if="Array.isArray(charactersResults) && !loading" id="listCharacters" class="grid-container py-[2rem]">
         <CharacterCard v-for="character in charactersResults" :key="character.name" class="col-span-6 sm:col-span-3 md:col-span-2 xl:col-span-3 bg-[#0B2828] border-[#C3F272] border-2 rounded-2xl">
@@ -222,7 +225,7 @@ async function resetData() {
           <span class="loader__element" />
         </div>
       </div>
-      <div id="characterPaginationBottom" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg xl:outline" style="outline-color: #257074;">
+      <div id="characterPaginationBottom" class="flex justify-center items-center py-[2rem] space-x-[0.5rem] text-center xl:space-x-[2rem] rounded-lg outline" style="outline-color: #257074;">
         <button v-if="charactersInfos && charactersInfos.prev" class="px-[2rem] bg-[#C3F272] text-[#101919] btn-shape" @click="getPrevCharacters()">
           Prev
         </button>
