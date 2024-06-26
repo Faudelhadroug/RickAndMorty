@@ -164,7 +164,7 @@ async function resetData() {
     <div class="col-span-6 xl:col-span-12 flex flex-wrap justify-center xl:flex-nowrap pb-[1rem] xl:pb-0">
       <img v-for="character in charactersResults" :key="character.id" width="64" height="64" :src="character.image" :alt="character.name" class="hover:scale-125 hover:duration-200 hover:mx-[0.5rem]" @click="openModalDetail(character.id)">
     </div>
-    <div class="col-span-6 md:col-span-4 md:col-start-2 xl:col-span-12 xl:col-start-2 xl:gap-[2rem] w-full">
+    <div class="col-span-6 md:col-span-4 md:col-start-2 xl:col-span-12 xl:col-start-2 xl:gap-[2rem] w-full text-center">
       <a href="https://github.com/afuh/rick-and-morty-api" target="_blank">
         <p class="underline font-bold text-red-400">The following data are deprecated, may contain error don't use it for any reference thanks !</p>
       </a>
