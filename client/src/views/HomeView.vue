@@ -214,7 +214,7 @@ async function resetData() {
             </div>
           </template>
           <template #image>
-            <img width="256" height="256" class="w-full rounded-2xl" :src="character.image" :alt="character.name">
+            <img width="256" height="256" class="w-full rounded-2xl cursor-pointer" :src="character.image" :alt="character.name" @click="openModalDetail(character.id)">
           </template>
         </CharacterCard>
       </div>
